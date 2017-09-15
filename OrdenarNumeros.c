@@ -49,8 +49,11 @@ void imprimir(int vectorDesordenado[10000])
 }
 void Ordenar(int VectorOrdenado[10000]){
 	system("cls");
+	clock_t t_ini,t_fin;
+	double secs;
 	int N=10000, paso, j, AUX;
 	int bandera=1;
+	t_ini =clock();
 	for(paso=0;paso<N-1&&bandera==1;paso++)
 	  {
 		bandera=0;
@@ -65,6 +68,9 @@ void Ordenar(int VectorOrdenado[10000]){
 			  }
 		  }
 	  }
+	t_fin=clock();
+	secs=(double)(t_fin-t_ini);
+	printf("%.16g milisegundos\n", secs);
 	printf("Vector Ordenado\n");
 	system("pause");
 }
